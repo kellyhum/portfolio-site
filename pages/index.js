@@ -1,13 +1,12 @@
-import Head from 'next/head'
+import Meta from '@components/Meta'
+import Nav from '@components/Nav'
 
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Kelly Hum | Portfolio Site</title>
-      </Head>
+      <Meta /> {/*get metadata*/}
 
-      <h1>Hello Next!</h1>
+      <Nav /> {/*import navigation menu*/}
     </div>
   )
 }
