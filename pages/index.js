@@ -3,10 +3,10 @@ import Nav from '@components/Nav'
 
 export default function Home() {
   return (
-    <div>
+    <main>
       <Meta /> {/*get metadata*/}
 
       <Nav /> {/*import navigation menu*/}
-    </div>
+    </main>
   )
 }
