@@ -2,15 +2,15 @@ import buttonlist from './buttonlist'
 
 const Nav = () => {
     return (  
-        <nav>
+        <nav className='flex'>
             <div>
 
             </div>
             
-            <ul>
+            <ul className='flex list-none'>
                 {
                     buttonlist.map((button) => (
-                        <li key={button.key}>
+                        <li className='p-1.5' key={button.key}>
                             {<a href={button.link}>{button.title}</a>}
                         </li>
                     ))
