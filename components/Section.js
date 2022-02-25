@@ -1,7 +1,7 @@
-const Section = ({title, children}) => {
+const Section = ({id, title, children}) => {
     return (  
-        <div>
-            <h1>{title}</h1>
+        <div id={id} className="px-section-side py-section-top">
+            <h1 className="font-title font-black tracking-wider text-5xl">{title}</h1>
             {children}
         </div>
     );
