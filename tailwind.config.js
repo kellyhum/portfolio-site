@@ -5,15 +5,20 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'sans': ['"Open Sans"', 'sans-serif'],
-      'title': ['Ubuntu', 'sans-serif']
+      'sans': ['Roboto', 'sans-serif'],
+      'title': ['"PT Serif"', 'serif']
     },
     colors: {
       'brown': '#3C352B',
       'caramel': '#A47F48',
       'beige': '#EBE0DA'
     },
-    extend: {},
+    extend: {
+      padding: {
+        'section-side': '22vw',
+        'section-top': '10vh',
+      }
+    },
   },
   plugins: [],
 }
