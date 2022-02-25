@@ -4,9 +4,15 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontSize: {
+      'landing-title': '4rem',
+      'section-title': '3.75rem',
+      'text': '1.5rem',
+      'nav': '1rem'
+    },
     fontFamily: {
-      'sans': ['Roboto', 'sans-serif'],
-      'title': ['"PT Serif"', 'serif']
+      'sans': ['Open Sans', 'sans-serif'],
+      'title': ['Domine', 'serif']
     },
     colors: {
       'brown': '#3C352B',
