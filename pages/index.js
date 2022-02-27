@@ -4,7 +4,7 @@ import Section from '@components/Section'
 
 export default function Home() {
   return (
-    <main className='h-screen w-screen text-brown'>
+    <main className='h-screen w-screen text-brown dark:bg-brown dark:text-beige transition-colors'>
       <Meta /> {/*get metadata*/}
 
       <Nav /> {/*import navigation menu*/}
