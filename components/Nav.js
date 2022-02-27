@@ -1,4 +1,5 @@
 import buttonlist from '../public/js/buttonlist'
+import toggle from '../public/js/darkmode'
 
 import ModeNightIcon from '@mui/icons-material/ModeNight';
 
@@ -19,7 +20,7 @@ const Nav = () => {
                 }
             </ul>
 
-            <button className='p-2 rounded-lg bg-caramel/30'>
+            <button onClick={toggle} className='p-2 rounded-lg text-caramel bg-caramel/30 dark:bg-beige/30 dark:text-beige'>
                 <ModeNightIcon />
             </button>
         </nav>
