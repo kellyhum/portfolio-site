@@ -7,7 +7,7 @@ const Nav = () => {
     return (  
         <nav className='text-nav flex items-center justify-between px-14 py-8'>
             <div>
-                <h3>KHum</h3>
+                <h1>KHum</h1>
             </div>
             
             <ul className='flex list-none ml-auto mr-10'>
