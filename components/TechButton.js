@@ -1,7 +1,7 @@
-const TechButton = ({techstack, color}) => {
+const TechButton = ({techtitle}) => {
     return (  
         <div>
-            {techstack}
+            {techtitle}
         </div>
     );
 }
