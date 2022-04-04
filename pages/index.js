@@ -2,47 +2,29 @@
 import Meta from '@components/Meta'
 import Nav from '@components/Nav'
 import Section from '@components/Section'
-import ProjectCard from '@components/ProjectCard'
 
-// import data
-import projectlist from 'public/js/projectlist'
+import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 
 export default function Home() {
   return (
-    <main className='h-screen w-full text-brown dark:bg-brown dark:text-beige transition-colors'>
+    <main className='w-screen h-screen text-black bg-beige'>
       <Meta /> {/*get metadata*/}
 
       <Nav /> {/*import navigation menu*/}
 
-      <Section id={'#'} title={'Hi, I\'m Kelly!'}> {/*landing section*/}
-        <p className='w-1/2 pt-4'>
-          Welcome to my digital space!  This is where you’ll find everything from my full scale projects to half-baked ideas.
-          Feel free to poke around, or take your time and scroll!
-        </p>
-      </Section>
-
-      <Section id={'#about'} title={'About'}> {/*about section*/}
-        <div className='flex justify-between'>
-          <p>
-            lorem ipsum
-          </p>
-          
-          <h3>
-            I like turning the old into the new
-          </h3>
+      <section id='landing' className="px-44 h-full w-full flex flex-col justify-evenly items-center">
+        <div>
+          <h1 className='font-title font-bold text-5xl text-center pb-8'>Hi, I'm <span className=''>Kelly</span></h1>
+          <h1 className='font-title font-bold text-5xl text-center'>Tinkerer and puzzle solver</h1>
         </div>
-      </Section>
 
-      <Section id={'#projects'} title={'Projects'}> {/*projects section*/}
-        <p>
-          lorem ipsum
-        </p>
+        <div className='flex flex-col'>
+          <KeyboardArrowDownRoundedIcon sx={{fontSize: 50}}/>
+          <KeyboardArrowDownRoundedIcon sx={{fontSize: 80}}/>
+        </div>
+      </section>
 
-        {
-          projectlist.map((project) => (
-            <ProjectCard title={project.title} description={project.description} blurb={project.blurb} techstack={project.techstack}/>
-          ))
-        }
+      <Section id={'about'} title={'I love a good challenge.'}>
 
       </Section>
     </main>
