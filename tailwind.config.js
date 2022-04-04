@@ -5,27 +5,17 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    fontSize: {
-      'landing-title': '4rem',
-      'section-title': '3.75rem',
-      'text': '1.5rem',
-      'nav': '1rem'
-    },
     fontFamily: {
-      'sans': ['Open Sans', 'sans-serif'],
-      'title': ['Domine', 'serif']
+      'sans': ['"Open Sans"', 'sans-serif'],
+      'title': ['Ubuntu', 'sans-serif']
     },
     colors: {
-      'brown': '#3C352B',
-      'caramel': '#A47F48',
-      'beige': '#EBE0DA'
-    },
-    extend: {
-      padding: {
-        'section-side': '22vw',
-        'section-top': '10vh',
-      }
-    },
+      'beige': '#F6F5F0',
+      'black': '#2D2D2B',
+      'coral': '#F7797D',
+      'golden': '#FBD786',
+      'teal': '#C6FFDD'
+    }
   },
   plugins: [],
 }
