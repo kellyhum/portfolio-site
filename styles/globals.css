@@ -1,5 +1,5 @@
-/*import title font*/
-@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+/*import fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu:wght@500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
