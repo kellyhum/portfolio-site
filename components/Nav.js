@@ -14,15 +14,10 @@ const Nav = () => {
                         buttonlist.map((button) => (
                             <li key={button.key} className='p-2.5 text-opacity-85'>
                                 {<a href={button.link} 
-                                className='inline-block relative 
-                                before:content-none 
-                                before:absolute 
-                                before:left-0
-                                before:bottom-0
-                                before:w-0 
-                                before:h-1
-                                before:bg-black
-                                hover:before:w-full'>{button.title}</a>}
+                                className='
+                                no-underline
+                                hover:underline
+                                hover:underline-offset-2'>{button.title}</a>}
                             </li>
                         ))
                     }
