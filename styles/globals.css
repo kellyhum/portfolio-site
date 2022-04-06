@@ -4,3 +4,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-beige;
+        @apply text-black;
+        @apply w-full;
+        @apply min-h-full;
+        @apply m-0;
+        @apply leading-relaxed
+    }
+}
