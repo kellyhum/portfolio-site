@@ -5,7 +5,7 @@ import ModeNightIcon from '@mui/icons-material/ModeNightOutlined';
 
 const Nav = () => {
     return (  
-        <div className='w-full h-20 px-44 flex items-center justify-between font-title'>
+        <header className='fixed w-full h-16 px-44 flex items-center justify-between font-title backdrop-blur'>
             <h1 className='font-bold'>KHum</h1>
 
             <nav className='flex'>            
@@ -27,8 +27,7 @@ const Nav = () => {
                     <ModeNightIcon /> 
                 </button>
             </nav>
-        </div>
-        
+        </header>
     );
 }
  
