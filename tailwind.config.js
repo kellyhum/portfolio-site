@@ -14,7 +14,12 @@ module.exports = {
       'black': '#2D2D2B',
       'coral': '#F7797D',
       'golden': '#FBD786',
-      'teal': '#C6FFDD'
+      'teal': '#1fddff'
+    },
+    extend: {
+      padding: {
+        'side': '25vw'
+      }
     }
   },
   plugins: [],
