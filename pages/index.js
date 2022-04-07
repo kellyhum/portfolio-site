@@ -4,9 +4,8 @@ import Nav from '@components/Nav'
 import Section from '@components/Section'
 import Project from '@components/Project';
 
-// import icons
+// import icon
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
-import ExtensionRoundedIcon from '@mui/icons-material/ExtensionRounded';
 
 export default function Home() {
   return (
@@ -18,7 +17,7 @@ export default function Home() {
       <section id='landing' className="pt-20 min-h-screen flex flex-col justify-evenly items-center">
         <div>
           <h1 className='font-title font-bold text-6xl text-center pb-8'>
-            Hi, I'm  <span className='text-transparent bg-clip-text bg-gradient-to-tr from-teal via-golden to-coral'>Kelly</span>
+            Hi, I'm  <span className='outlinedtext bg-clip-text bg-gradient-to-tr from-coral via-golden to-teal'>Kelly</span>
           </h1>
           <h1 className='font-title font-bold text-6xl text-center'>Tinkerer and puzzle solver</h1>
         </div>
@@ -38,11 +37,8 @@ export default function Home() {
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
 
-          <div className='grid grid-cols-2 grid-rows-2 justify-center items-center flex-1'>
-            <ExtensionRoundedIcon sx={{fontSize: 80}}/>
-            <ExtensionRoundedIcon sx={{fontSize: 80}}/>
-            <ExtensionRoundedIcon sx={{fontSize: 80}}/>
-            <ExtensionRoundedIcon sx={{fontSize: 80}}/>
+          <div className='flex-1'>
+            
           </div>
         </div>
       </Section>
@@ -59,6 +55,14 @@ export default function Home() {
           <Project />
         </div>
       </Section>
+
+      <Section id={'contact'} title={'Curious? Let\'s connect!'}>
+
+      </Section>
+
+      <footer>
+        <p>Copyright Kelly Hum 2022</p>
+      </footer>
     </main>
   )
 }
