@@ -5,19 +5,49 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    body {
-        @apply bg-beige;
-        @apply text-black;
-        @apply w-full;
-        @apply min-h-full;
-        @apply m-0;
-        @apply leading-relaxed
-    }
+html {
+    scroll-behavior: smooth;
+    margin: 0;
 }
 
-.outlinedtext {
-    -webkit-text-stroke: 1.5px #2D2D2B;
-    /*text-shadow: 0 0 1.5px #2d2d2b, 0 0 1.5px #2d2d2b, 0 0 1.5px #2d2d2b, 0 0 1.5px #2d2d2b; */
-    color: transparent;
+body {
+    background-color: #F6F5F0;
+    color: #2D2D2B;
+    width: 100%;
+    min-height: 100%;
+    line-height: 1.625;
+}
+
+/* add bottom box shadow to navbar on scroll */
+.nav-scrolled {
+    box-shadow: 0 1px 1px -1px #2D2D2B;
+}
+
+.landing-left::before, .landing-right::before, .landing-name::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.05rem;
+    width: 100%;
+    height: 0.75rem;
+    z-index: -1;
+    transition-timing-function: ease-in-out;
+    transition-duration: 150ms;
+}
+
+.landing-name::before {
+    background-color: #FBD786;
+}
+
+.landing-left::before {
+    background-color: #83c5be;
+}
+
+.landing-right::before {
+    background-color: #f28482;
+}
+
+.landing-right:hover::before, .landing-left:hover::before, .landing-name:hover::before {
+    bottom: 0.1rem;
+    height: 100%;
 }
