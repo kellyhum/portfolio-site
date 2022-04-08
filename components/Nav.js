@@ -9,15 +9,19 @@ const Nav = () => {
             <h1 className='font-bold'>KHum</h1>
 
             <nav className='flex'>            
-                <ul className='flex justify-between align-middle font-medium'>
+                <ul className='flex justify-between align-middle font-medium mr-5'>
                     {
                         buttonlist.map((button) => (
                             <li key={button.key} className='p-2.5 text-opacity-85'>
                                 {<a href={button.link} 
                                 className='
-                                no-underline
+                                underline
+                                underline-offset-2
+                                decoration-black/20
                                 hover:underline
-                                hover:underline-offset-2'>{button.title}</a>}
+                                hover:underline-offset-2
+                                hover:decoration-black
+                                transition-all'>{button.title}</a>}
                             </li>
                         ))
                     }
