@@ -12,13 +12,15 @@ module.exports = {
     colors: {
       'beige': '#F6F5F0',
       'black': '#2D2D2B',
-      'coral': '#F7797D',
       'golden': '#FBD786',
-      'teal': '#1fddff'
+      'coral': '#f28482'
     },
     extend: {
       padding: {
         'side': '25vw'
+      },
+      boxShadow: {
+        'projectshadow': '4px 4px 0 4px #FBD786'
       }
     }
   },
