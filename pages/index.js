@@ -10,22 +10,22 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 
 // import projects
-import projectlist from 'utils/js/projectlist.js'
+import projectlist from '../utils/projectlist.js'
 
 export default function Home() {
   return (
-    <main>
-      <Meta /> {/*get metadata*/}
+    <main className='text-default'>
+      <Meta />
 
-      <Nav /> {/*import navigation menu*/}
+      <Nav />
 
       <section id='landing' className="pt-20 min-h-screen flex flex-col justify-evenly items-center">
         <div>
-          <h1 className='font-title font-bold text-6xl text-center pb-8'>
-            Hi, I'm  <span className='landing-name relative'>Kelly</span>
+          <h1 className='font-title font-bold text-title text-center pb-8'>
+            Hi, I'm  <span className='landing-name relative dark:before:bg-dark-gold'>Kelly.</span>
           </h1>
-          <h1 className='font-title font-bold text-6xl text-center'>
-            <span className='landing-left relative'>Tinkerer</span> and <span className='landing-right relative'>puzzle solver</span>
+          <h1 className='font-title font-bold text-title text-center'>
+            <span className='landing-left relative'>Developer</span> and <span className='landing-right relative'>puzzle solver.</span>
           </h1>
         </div>
 
@@ -35,10 +35,30 @@ export default function Home() {
       <Section id={'about'} title={'I love a good challenge.'}>
         <div>
           <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Hey, hi, hello! My name is Kelly - creator of tools, writer of words, and homo sapien with a knack for solving jigsaw puzzles (or any logical problem, really).
+          </p>
+
+          <p>
+            My first introduction to the world of code was through a seemingly unrelated topic: typing.  
+            At the time, my only goal was to become the fastest typer in the class - hence, I spent the entire summer sitting in front of the computer and learning how to type.
+          </p>
+
+          <p>
+            Fast forward a few years, and I’ve used that determination to pick up Python, Javascript, HTML and CSS.  
+            Plus, I’ve gotten the chance to test these skills in hackathons, competitions, and projects - like XdHacks, picoCTF, and AI4ALL.
+          </p>
+
+          <p>
+            These days, I’m currently:
+            <ul className='list-inside list-disc indent-5'>
+              <li>Creating a monthly newsletter to jot down my thoughts: expect an update soon!</li>
+              <li>Diving into more CTF (capture the flag) competitions</li>
+              <li>Reading a lot of self-care books: think Atomic Habits by James Clear</li>
+            </ul>
+          </p>
+
+          <p>
+            If any of these ideas spark your interest, feel free to reach out!
           </p>
         </div>
       </Section>
@@ -48,15 +68,15 @@ export default function Home() {
 
         <div className='grid grid-cols-2 gap-10'>
           {
-            projectlist.map(({title, desc, techstack, github, key}) => (
-              <div className='w-full p-10 border rounded-2xl hover:shadow-projectshadow transition-all' key={key}>
-                <h3 className="text-3xl font-title">{title}</h3>
+            projectlist.map(({title, desc, techstack, link, key}) => (
+              <div className='w-full p-10 border rounded-2xl hover:shadow-projectshadow dark:hover:shadow-projectshadowdark transition-all' key={key}>
+                <h3 className="text-project font-title">{title}</h3>
                 <hr className="my-5"></hr>
                 <p className='my-3'>{desc}</p>
                 {techstack.map((tech) => (
                   <span className='font-semibold my-3 pr-3'>{tech} </span>
                 ))}
-                <a href={github} target={'_blank'} rel={'noreferrer'} className="block pt-3 underline underline-offset-1 hover:text-cherry transition-colors">Github</a>
+                <a href={link} target={'_blank'} rel={'noreferrer'} className="block pt-3 w-fit underline underline-offset-1 hover:text-cherry dark:hover:text-teal">Link</a>
               </div>
             ))
           }
@@ -66,7 +86,7 @@ export default function Home() {
       <Section id={'contact'} title={'Curious? Let\'s connect!'} className='text-center py-20'>
         <p className='mb-8'>My inbox is always open, send me a message and I'll do my best to get back to you!</p>
 
-        <button className='py-3 px-5 border rounded hover:bg-golden transition-all'>
+        <button className='py-3 px-5 border rounded hover:bg-golden dark:hover:bg-coral dark:hover:bg-opacity-90 transition-all'>
           <a href='mailto:kellyhum88@gmail.com'>Say Hi</a>
         </button>
       </Section>
@@ -76,7 +96,7 @@ export default function Home() {
         <a href='https://www.linkedin.com/in/kellyhum/' target={'_blank'} rel={'noreferrer'}><LinkedInIcon sx={{ mx: '0.5rem', fontSize: 25, color: '#2d2d2b', "&:hover": { color: "#9b2226" } }} /></a>
         <a href='mailto:kellyhum88@gmail.com'><EmailIcon sx={{ mx: '0.5rem', fontSize: 25, color: '#2d2d2b', "&:hover": { color: "#9b2226" } }} /></a>
 
-        <p className='pt-3 text-sm'>Designed + Built by Kelly Hum, © 2022</p>
+        <p className='pt-3 text-footer'>Designed + Built by Kelly Hum, © 2022</p>
       </footer>
     </main>
   )
