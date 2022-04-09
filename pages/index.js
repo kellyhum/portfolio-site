@@ -2,13 +2,15 @@
 import Meta from '@components/Meta'
 import Nav from '@components/Nav'
 import Section from '@components/Section'
-import Project from '@components/Project';
 
-// import icon
+// import icons
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+
+// import projects
+import projectlist from 'public/js/projectlist.js'
 
 export default function Home() {
   return (
@@ -45,13 +47,19 @@ export default function Home() {
         <p className='mb-8'>Check out some of my featured projects!</p>
 
         <div className='grid grid-cols-2 gap-10'>
-          <Project title={'test'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'} />
-
-          <Project />
-          <Project />
+          {
+            projectlist.map(({title, desc, techstack, github, key}) => (
+              <div className='w-full p-10 border rounded-2xl hover:shadow-projectshadow transition-all' key={key}>
+                <h3 className="text-3xl font-title">{title}</h3>
+                <hr className="my-5"></hr>
+                <p className='my-3'>{desc}</p>
+                {techstack.map((tech) => (
+                  <span className='font-semibold my-3 pr-3'>{tech} </span>
+                ))}
+                <a href={github} target={'_blank'} rel={'noreferrer'} className="block pt-3 underline underline-offset-1 hover:text-cherry transition-colors">Github</a>
+              </div>
+            ))
+          }
         </div>
       </Section>
 
@@ -64,10 +72,10 @@ export default function Home() {
       </Section>
 
       <footer className='text-center py-5'>
-        <a href='https://github.com/kellyhum' target={'_blank'} rel={'noreferrer'}><GitHubIcon style={{ color: '#2D2D2B', fontSize: 25 }} sx={{ mx: '0.5rem' }} /></a>
-        <a href='https://www.linkedin.com/in/kellyhum/' target={'_blank'} rel={'noreferrer'}><LinkedInIcon style={{ color: '#2D2D2B', fontSize: 25 }} sx={{ mx: '0.5rem' }} /></a>
-        <a href='mailto:kellyhum88@gmail.com'><EmailIcon style={{ color: '#2D2D2B', fontSize: 25 }} sx={{ mx: '0.5rem' }} /></a>
-        
+        <a href='https://github.com/kellyhum' target={'_blank'} rel={'noreferrer'}><GitHubIcon sx={{ mx: '0.5rem', fontSize: 25, color: '#2d2d2b', "&:hover": { color: "#9b2226" } }} /></a>
+        <a href='https://www.linkedin.com/in/kellyhum/' target={'_blank'} rel={'noreferrer'}><LinkedInIcon sx={{ mx: '0.5rem', fontSize: 25, color: '#2d2d2b', "&:hover": { color: "#9b2226" } }} /></a>
+        <a href='mailto:kellyhum88@gmail.com'><EmailIcon sx={{ mx: '0.5rem', fontSize: 25, color: '#2d2d2b', "&:hover": { color: "#9b2226" } }} /></a>
+
         <p className='pt-3 text-sm'>Designed + Built by Kelly Hum, © 2022</p>
       </footer>
     </main>
