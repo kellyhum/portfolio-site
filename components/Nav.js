@@ -1,5 +1,5 @@
-import buttonlist from '../utils/buttonlist'
-import toggle from '../utils/js/darkmode'
+import buttonlist from '../utils/buttonlist.js'
+import toggle from '../utils/darkmode.js'
 
 import ModeNightIcon from '@mui/icons-material/ModeNightOutlined';
 
@@ -14,13 +14,13 @@ const Nav = () => {
                         buttonlist.map((button) => (
                             <li key={button.key} className='p-2.5 text-opacity-85'>
                                 {<a href={button.link} 
-                                className='hover:text-cherry transition-colors'>{button.title}</a>}
+                                className='hover:text-cherry dark:hover:text-coral'>{button.title}</a>}
                             </li>
                         ))
                     }
                 </ul>
 
-                <button onClick={toggle} className='p-2.5 rounded-md hover:bg-golden transition-colors'>
+                <button onClick={toggle} className='p-2.5 rounded-md hover:bg-golden dark:hover:bg-coral'>
                     <ModeNightIcon /> 
                 </button>
             </nav>
