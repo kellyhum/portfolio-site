@@ -13,7 +13,7 @@ module.exports = {
       'beige': '#F6F5F0',
       'black': '#2D2D2B',
       'golden': '#FBD786',
-      'coral': '#f28482'
+      'cherry': '#9b2226'
     },
     extend: {
       padding: {
