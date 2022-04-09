@@ -10,7 +10,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 
 // import projects
-import projectlist from 'public/js/projectlist.js'
+import projectlist from 'utils/js/projectlist.js'
 
 export default function Home() {
   return (

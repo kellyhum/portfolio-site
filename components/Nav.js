@@ -1,5 +1,5 @@
-import buttonlist from '../public/js/buttonlist'
-import toggle from '../public/js/darkmode'
+import buttonlist from '../utils/buttonlist'
+import toggle from '../utils/js/darkmode'
 
 import ModeNightIcon from '@mui/icons-material/ModeNightOutlined';
 
