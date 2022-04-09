@@ -10,11 +10,6 @@ const buttonlist = [
         "key": 2
     },
     {
-        "title": "Experience",
-        "link": "#experience",
-        "key": 3
-    },
-    {
         "title": "Contact",
         "link": "#contact",
         "key": 4
