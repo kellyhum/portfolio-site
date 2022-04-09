@@ -14,14 +14,7 @@ const Nav = () => {
                         buttonlist.map((button) => (
                             <li key={button.key} className='p-2.5 text-opacity-85'>
                                 {<a href={button.link} 
-                                className='
-                                underline
-                                underline-offset-2
-                                decoration-black/20
-                                hover:underline
-                                hover:underline-offset-2
-                                hover:decoration-black
-                                transition-all'>{button.title}</a>}
+                                className='hover:text-cherry transition-colors'>{button.title}</a>}
                             </li>
                         ))
                     }
