@@ -1,7 +1,7 @@
 const projectlist = [
     {
         'title': 'this site',
-        'desc': 'A place for showcasing project.  I started by creating a mockup on Figma and designing a colour palette.\
+        'desc': 'A place for showcasing projects.  I started by creating a mockup on Figma and designing a colour palette.\
                 Using the mockup, I began developing the site using Next.js alongside Tailwind CSS for styling.',
         'techstack': ['Next.js', 'Tailwind CSS', 'Figma'],
         'link': 'https://github.com/kellyhum/portfolio-site',
