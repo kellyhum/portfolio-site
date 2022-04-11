@@ -27,6 +27,7 @@ const Nav = () => {
         <button
           onClick={toggle}
           className="p-2.5 rounded-md hover:bg-golden dark:hover:bg-coral"
+          aria-label="Dark Mode Button"
         >
           <ModeNightIcon />
         </button>
