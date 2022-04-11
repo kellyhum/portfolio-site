@@ -106,7 +106,7 @@ export default function Home() {
                 rel={"noreferrer"}
                 className="block pt-3 w-fit underline underline-offset-1 hover:text-cherry dark:hover:text-teal"
               >
-                Link
+                Github
               </a>
             </div>
           ))}
