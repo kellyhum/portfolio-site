@@ -89,7 +89,7 @@ export default function Home() {
         <p className="mb-8">Check out some of my featured projects!</p>
 
         <div className="grid grid-cols-2 gap-10">
-          {projectlist.map(({ title, desc, techstack, link, key }) => (
+          {projectlist.map(({ title, desc, techstack, github, key }) => (
             <div
               className="w-full p-10 border rounded-2xl hover:shadow-projectshadow dark:hover:shadow-projectshadowdark transition-all"
               key={key}
@@ -101,7 +101,7 @@ export default function Home() {
                 <span className="font-semibold my-3 pr-3">{tech} </span>
               ))}
               <a
-                href={link}
+                href={github}
                 target={"_blank"}
                 rel={"noreferrer"}
                 className="block pt-3 w-fit underline underline-offset-1 hover:text-cherry dark:hover:text-teal"
