@@ -5,7 +5,6 @@ const Meta = ({ title, description, keywords }) => {
     <Head>
       <title>{title}</title>
       <meta name="description" content={description}></meta>
-      <meta name="keywords" content={keywords}></meta>
 
       <link
         rel="apple-touch-icon"
