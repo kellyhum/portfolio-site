@@ -4,10 +4,10 @@ import Nav from "@components/Nav";
 import Section from "@components/Section";
 
 // import icons
-import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
+import { FiGithub } from 'react-icons/fi';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
+import { IconContext } from "react-icons";
 
 // import projects
 import projectlist from "../utils/projectlist.js";
@@ -36,10 +36,7 @@ export default function Home() {
           </h1>
         </div>
 
-        <KeyboardArrowDownRoundedIcon
-          sx={{ fontSize: 80 }}
-          className="-mb-32"
-        />
+        
       </section>
 
       <Section id={"about"} title={"I love a good challenge."}>
@@ -104,7 +101,7 @@ export default function Home() {
                 href={github}
                 target={"_blank"}
                 rel={"noreferrer"}
-                className="block pt-3 w-fit underline underline-offset-1 hover:text-cherry dark:hover:text-teal"
+                className="block mt-3 w-fit underline underline-offset-1 hover:decoration-wavy hover:decoration-coral hover:decoration-2 dark:hover:decoration-green"
               >
                 Github
               </a>
@@ -123,50 +120,34 @@ export default function Home() {
           back to you!
         </p>
 
-        <button className="py-3 px-5 border rounded hover:bg-golden dark:hover:bg-coral dark:hover:bg-opacity-90 transition-all">
+        <button className="py-3 px-5 border rounded hover:bg-golden dark:hover:bg-dark-gold dark:hover:text-black transition-all">
           <a href="mailto:kellyhum88@gmail.com">Say Hi</a>
         </button>
       </Section>
 
       <footer className="text-center py-5">
-        <a
-          href="https://github.com/kellyhum"
-          target={"_blank"}
-          rel={"noreferrer"}
-        >
-          <GitHubIcon
-            sx={{
-              mx: "0.5rem",
-              fontSize: 25,
-              color: "#2d2d2b",
-              "&:hover": { color: "#9b2226" },
-            }}
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/kellyhum/"
-          target={"_blank"}
-          rel={"noreferrer"}
-        >
-          <LinkedInIcon
-            sx={{
-              mx: "0.5rem",
-              fontSize: 25,
-              color: "#2d2d2b",
-              "&:hover": { color: "#9b2226" },
-            }}
-          />
-        </a>
-        <a href="mailto:kellyhum88@gmail.com">
-          <EmailIcon
-            sx={{
-              mx: "0.5rem",
-              fontSize: 25,
-              color: "#2d2d2b",
-              "&:hover": { color: "#9b2226" },
-            }}
-          />
-        </a>
+        <div className="flex justify-center">
+          <IconContext.Provider value={{className: 'footer-icons'}}>
+            <a
+              href="https://github.com/kellyhum"
+              target={"_blank"}
+              rel={"noreferrer"}
+            >
+              <FiGithub  /> 
+            </a>
+            <a
+              href="https://www.linkedin.com/in/kellyhum/"
+              target={"_blank"}
+              rel={"noreferrer"}
+            >
+              <FaLinkedinIn />
+            </a>
+            <a href="mailto:kellyhum88@gmail.com">
+              <MdEmail />
+            </a>
+          </IconContext.Provider>
+        </div>
+        
 
         <p className="pt-3 text-footer">
           Designed + Built by Kelly Hum, © 2022
