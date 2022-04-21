@@ -20,9 +20,8 @@ module.exports = {
       'beige': '#F6F5F0',
       'black': '#2D2D2B',
       'golden': '#FBD786',
-      'cherry': '#9b2226',
-      'coral': '#f28482',
-      'teal': '#83c5be',
+      'coral': '#ecb099',
+      'green': '#a3ceb6',
       'dark-gold': '#d4af47'
     },
     screens: {
@@ -38,7 +37,7 @@ module.exports = {
       },
       boxShadow: {
         'projectshadow': '6px 4px 0 4px #FBD786',
-        'projectshadowdark': '6px 4px 0 4px rgba(242, 132, 130, 0.9)'
+        'projectshadowdark': '6px 4px 0 4px #d4af47'
       }
     }
   },
