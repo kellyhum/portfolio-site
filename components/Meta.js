@@ -6,6 +6,8 @@ const Meta = ({ title, description, keywords }) => {
       <title>{title}</title>
       <meta name="description" content={description}></meta>
 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+
       <link
         rel="apple-touch-icon"
         sizes="180x180"
