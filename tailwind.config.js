@@ -25,6 +25,13 @@ module.exports = {
       'teal': '#83c5be',
       'dark-gold': '#d4af47'
     },
+    screens: {
+      '2xl': {'max': '1535px'},
+      'xl': {'max': '1279px'},
+      'lg': {'max': '1023px'},
+      'md': {'max': '767px'},
+      'sm': {'max': '639px'},
+    },
     extend: {
       padding: {
         'side': '25vw'
