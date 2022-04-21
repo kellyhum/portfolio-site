@@ -21,7 +21,7 @@ export default function Home() {
 
       <section
         id="landing"
-        className="pt-20 min-h-screen flex flex-col justify-evenly items-center"
+        className="pt-20 min-h-screen flex flex-col justify-evenly items-center lg:px-side"
       >
         <div>
           <h1 className="font-title font-bold text-title text-center pb-8">
@@ -31,8 +31,8 @@ export default function Home() {
             </span>
           </h1>
           <h1 className="font-title font-bold text-title text-center">
-            <span className="landing-left relative">Developer</span> and{" "}
-            <span className="landing-right relative">puzzle solver.</span>
+            <span key={1} className="landing-left relative">Developer</span> and{" "}
+            <span key={2} className="landing-right relative">puzzle solver.</span>
           </h1>
         </div>
 
@@ -88,7 +88,7 @@ export default function Home() {
       <Section id={"projects"} title={"And projects are fun too!"}>
         <p className="mb-8">Check out some of my featured projects!</p>
 
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid grid-cols-2 gap-10 lg:grid-cols-1">
           {projectlist.map(({ title, desc, techstack, github, key }) => (
             <div
               className="w-full p-10 border rounded-2xl hover:shadow-projectshadow dark:hover:shadow-projectshadowdark transition-all"
